@@ -9,6 +9,36 @@
 
 </head>
 <body>
-    
+    <main>
+        <div class="container">
+            <h1></h1>
+            <div class="row">
+                <div class="col-12">
+
+<div class="card my-5">
+  <div class="card-header">
+    Password Generator
+  </div>
+  <div class="card-body">
+                       <form method="GET" class="row">
+    <div class="col-7"></div>
+        <div class="col-5">
+            <button class="btn btn-primary w-100">Genera password sicura</button>
+        </div>
+
+</form>
+  </div>
+</div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
 </body>
 </html>
