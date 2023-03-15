@@ -7,7 +7,7 @@ function generate_password($allowed_chars, $length) {
 $rand_char = rand(0, strlen($allowed_chars) -1);
 $password .= $allowed_chars[$rand_char];
     }
-    echo $password;
+    return $password;
     };
 
 if(!empty($_GET)) {
@@ -15,7 +15,7 @@ if(!empty($_GET)) {
 $alphabet = "abcdefghijklmnopqrstuvwxyz";
 $alphabetUC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 $numbers = "1234567890";
-$specials = "!£$%&/()={}-_";
+$specials = "!$%&/()={}-_";
 
 $password_all_chars = $alphabet . $alphabetUC . $numbers . $specials;
 $password_length = (int) $_GET["password_length"] ?? 7;
@@ -54,7 +54,13 @@ $generated_password = generate_password($password_all_chars, $password_length);
   <div class="card-header">
     Password Generator
   </div>
+
+
+
+
+
   <div class="card-body">
+  <?php if(!isset($generated_password)) : ?>
                        <form method="GET" class="row">
     <div class="col-7">
         <div class="mb-3">
@@ -69,6 +75,12 @@ $generated_password = generate_password($password_all_chars, $password_length);
         </div>
 
 </form>
+<?php else : ?>
+    <div class="alert alert-success" role="alert">
+La password è stata generata correttamente: <br />
+<strong><?= $generated_password ?></strong>
+</div>
+    <?php endif; ?>
   </div>
 </div>
 
