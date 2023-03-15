@@ -1,37 +1,24 @@
 <?php
-
-function generate_password($allowed_chars, $length) {
-    $password = "";
-
-    while(strlen($password) < $length) {
-$rand_char = rand(0, strlen($allowed_chars) -1);
-$password .= $allowed_chars[$rand_char];
-    }
-    return $password;
-    };
-
+require_once(__DIR__ . "/_partials/functions.php");
 if(!empty($_GET)) {
 
-$alphabet = "abcdefghijklmnopqrstuvwxyz";
-$alphabetUC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-$numbers = "1234567890";
-$specials = "!$%&/()={}-_";
-
-$password_all_chars = $alphabet . $alphabetUC . $numbers . $specials;
-$password_length = (int) $_GET["password_length"] ?? 7;
-
-$generated_password = generate_password($password_all_chars, $password_length);
-
-
-
-
-}
+    $alphabet = "abcdefghijklmnopqrstuvwxyz";
+    $alphabetUC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    $numbers = "1234567890";
+    $specials = "!$%&/()={}-_";
+    
+    $password_all_chars = $alphabet . $alphabetUC . $numbers . $specials;
+    $password_length = (int) $_GET["password_length"] ?? 7;
+    
+    $generated_password = generate_password($password_all_chars, $password_length);
+    
+    
+    
+    
+    }
+    
 
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="it">
