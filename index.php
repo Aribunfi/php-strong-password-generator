@@ -21,9 +21,16 @@
   </div>
   <div class="card-body">
                        <form method="GET" class="row">
-    <div class="col-7"></div>
+    <div class="col-7">
+        <div class="mb-3">
+  <label for="password_length" class="form-label">Lunghezza password</label>
+  <input type="number" class="form-control" id="password_length" name="password_length" placeholder="scegli quanto vuoi sia lunga la psw">
+</div>
+    </div>
         <div class="col-5">
+            <div class="my-4">
             <button class="btn btn-primary w-100">Genera password sicura</button>
+        </div>
         </div>
 
 </form>
