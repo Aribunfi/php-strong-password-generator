@@ -1,3 +1,16 @@
+<?php
+
+$alphabet = "abcdefghijklmnopqrstuvwxyz";
+$alphabetUC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+$numbers = "1234567890";
+$specials = "!£$%&/()={}"
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
