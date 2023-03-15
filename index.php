@@ -3,16 +3,17 @@
 $alphabet = "abcdefghijklmnopqrstuvwxyz";
 $alphabetUC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 $numbers = "1234567890";
-$specials = "!£$%&/()={}-_"
+$specials = "!£$%&/()={}-_";
 
 $password_all_chars = $alphabet . $alphabetUC . $numbers . $specials;
-$password_length = $GET["password_length"] ?? 7;
+$password_length = $_GET["password_length"] ?? 7;
 
 $generated_password = generate_password($password_all_chars, $password_length);
 
 
-function generate_password ($allowed_chars, $length) {
-
+function generate_password($allowed_chars, $length) {
+var_dump($allowed_chars);
+var_dump($length);
 };
 
 
